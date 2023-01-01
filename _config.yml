@@ -1,6 +1,6 @@
 # Config
 # ========================================================================================
-
+favicon: /assets/img/favicon.ico
 # Uncomment and set the URL of your site (with protocol, e.g. `https://`)
 # NOTE: You don't need to provide this property when hosting on GitHub Pages or Netlify.
 url:                   https://ludence8.github.io
@@ -36,7 +36,7 @@ keywords:              []
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
 # It also used by the `jekyll-seo-tag` plugin.
-logo:                  /assets/img/logo.png
+logo:                  /assets/img/logo.jpg
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
@@ -48,10 +48,12 @@ author:
 
 # Add links to the sidebar.
 menu:
-  - title:             Example
-    url:               /Example/
-  - title:             Documentation
-    url:               /docs/
+  - title:             project
+    url:               /project/
+  - title:             Baekjoon
+    url:               /baekjoon/
+  - title:             Daily
+    url:               /daily/    
   - title:             About
     url:               /about/
 
@@ -79,7 +81,7 @@ paginate_path:         /:num/
 # Theme
 # ---------------------------------------------------------------------------------------
 
-#theme: jekyll-theme-hydejack
+theme: jekyll-theme-hydejack
 remote_theme: hydecorp/hydejack@v9
 
 
@@ -87,13 +89,13 @@ remote_theme: hydecorp/hydejack@v9
 # ----------------------------------------------------------------------------------------
  
 # Sidebar image and theme color of the site.
-accent_image:          /assets/img/sidebar-bg.jpg
-accent_color:          rgb(79,177,186)
+accent_image:          none
+accent_color:          rgb(66,72,116)
 
 # This is used for the `theme-color` meta tag,
 # which changes the background color of the browser UI in certain browsers.
 # Defaults to `accent_color`.
-theme_color:           rgb(25,55,71)
+theme_color:           rgb(166,177,225)
 
 # The string encoding which fonts to fetch from Google Fonts.
 # See: <https://hydejack.com/docs/configuration/>
