@@ -15,7 +15,7 @@ utterances:
   repo:                "Ludence8/github.io"
   issue-term:          "pathname"
   label:               "Comments"
-  theme:               "dark-blue"
+  theme:               "github-light"
 # General settings
 # ---------------------------------------------------------------------------------------
 
