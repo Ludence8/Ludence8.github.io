@@ -11,7 +11,11 @@ url:                   https://ludence8.github.io
 # NOTE: You don't need to provide this property when hosting on GitHub Pages or Netlify.
 # baseurl:               '/hydejack-starter-kit'
 
-
+utterances:
+  repo:                "Ludence8/github.io"
+  issue-term:          "pathname"
+  label:               "Comments"
+  theme:               "dark-blue"
 # General settings
 # ---------------------------------------------------------------------------------------
 
