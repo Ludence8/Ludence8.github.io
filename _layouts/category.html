@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<p style="font-size: 40px; font-weight: bold;">{{page.title}}</p>
+<hr>
+<div style="font-size: 20px;">{{content}}</div>
+<ul class="posts-list">
+    
+  {% assign category = page.category | default: page.title %}
+  {% for post in site.categories[category] %}
+    <li>
+      <h3>
+        <a href="{{ site.baseurl }}{{ post.url }}">
+          {{ post.title }}
+        </a>&nbsp;&nbsp;
+        <small>{{ post.date | date_to_string }}</small>
+      </h3>
+    </li>
+  {% endfor %}
+  
+</ul>

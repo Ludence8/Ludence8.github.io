@@ -1,0 +1,47 @@
+<header class="masthead">
+  {% if site.avatar -%}
+    <div class="avatar">
+      {%- if site.avatar contains "://" -%}
+        {%- assign avatar = site.avatar -%}
+      {%- else -%}
+        {%- assign avatar = site.avatar | relative_url -%}
+      {%- endif -%}
+      <img src="{{ avatar }}" class="avatar-image" alt="{{ site.author.name }}">
+    </div>
+  {%- endif %}
+  <div class="masthead-title">
+    <a href="{{ "/" | relative_url }}" title="Home">{{ site.title }}</a>
+  </div>
+  <div class="masthead-tagline">
+    <small>{{ site.description }}</small>
+  </div>
+  {%- if site.data.navigation -%}
+  <nav class="navigation">
+    <ul class="navigation-list">
+      {% assign pages_list = site.pages %}
+      {% for node in pages_list %}
+        {% if node.title != null %}
+          {% if node.layout == "category" %}
+            <li class="category"><a class="category-link {% if page.url == node.url %} active{% endif %}"
+            href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a></li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+  {%- endif -%}
+  {% if site.data.social -%}
+    <div class="social pure-menu pure-menu-horizontal">
+      <ul class="social-icons pure-menu-list">
+      {% for social in site.data.social -%}
+        <li class="pure-menu-item">
+          <a class="social-icon pure-menu-link" href="{{ social.url }}">
+            <i class="{{ social.icon | default: 'fas fa-link' }}" title="{{ social.title }}"></i>
+          </a>
+        </li>
+      {%- endfor %}
+      </ul>
+    </div>
+  {%- endif %}
+</header>
+

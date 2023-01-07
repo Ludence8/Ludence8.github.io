@@ -1,15 +1,8 @@
 ---
-layout: about
-image: /assets/img/blog/hydejack-9.jpg
-description: >
-  A boutique Jekyll theme for hackers, nerds, and academics,
-  with a focus on personal sites that are meant to impress.
-hide_description: true
-redirect_from:
-  - /download/
+layout: page
+title: About
 ---
 
-# About
+**Not Pure Poole** is a simple, beautiful, and powerful Jekyll theme for blogs. It is built on [Poole](https://github.com/poole/poole) and [Pure](https://purecss.io/).
 
-<!--author-->
-
+For more information about Not Pure Poole, please browse the [README](https://github.com/vszhub/not-pure-poole) file.
