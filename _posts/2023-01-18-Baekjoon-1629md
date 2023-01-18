@@ -1,0 +1,71 @@
+---
+layout: post
+title: "[백준, python] 1629번 - 곱셈"
+tags: [Baekjoon, python]
+math: true
+date: 2023-01-18 12:04 +0800
+categories:
+    - Baekjoon
+toc: true
+---
+_백준 문제풀이 시작_
+* * *
+## 문제
+자연수 A를 B번 곱한 수를 알고 싶다. 단 구하려는 수가 매우 커질 수 있으므로 이를 C로 나눈 나머지를 구하는 프로그램을 작성하시오.
+## 입력
+첫째 줄에 A, B, C가 빈 칸을 사이에 두고 순서대로 주어진다. A, B, C는 모두 2,147,483,647 이하의 자연수이다.
+## 출력
+첫째 줄에 A를 B번 곱한 수를 C로 나눈 나머지를 출력한다.
+* * *
+## 풀이
+<details>
+<summary style="font-weight:bold; font-size:17px">풀이 확인하기</summary>
+<div markdown="1">
+  문제를 얼핏 보면 매우 쉬운 문제같지만 시간 제한에 주목하면 평범한 방식으로는 절대 통과하지 못함을 알 수 있다. 그래서 우리는 중고등학교에서 배웠던 지수법칙을 응용할 것이다.
+
+  이때 지수법칙이란   
+  $$
+    {x^n}\times{x^m} = {x^n+m}
+
+```python
+import sys
+from collections import deque
+input = sys.stdin.readline
+
+num = int(input())
+answer = []
+
+for _ in range(num):
+    is_Error = False
+    command = input().rstrip()
+    num1 = int(input())
+    lis = input().replace('[', ',').replace(']', ',').rstrip().split(',')[1:-1]
+    if(num1 == 0):
+        lis = []
+    else:
+        lis = deque(map(int,lis))
+    
+    is_reverse = 0
+    for i in command:
+        if(i == "R"):
+            is_reverse += 1
+        elif(i == "D"):
+            if(len(lis) == 0):
+                is_Error = True
+                break
+            else:
+                if(is_reverse % 2 == 1):
+                    lis.pop()
+                else:
+                    lis.popleft()
+    
+    if(is_Error):
+        print('error')
+    else:
+        if(is_reverse % 2 == 1):
+            lis.reverse()
+        print('['+','.join(map(str, lis))+']')
+
+```
+</div>
+</details>
