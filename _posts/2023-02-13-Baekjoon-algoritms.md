@@ -18,7 +18,8 @@ toc: true
 가장 단순한 방법이다. 바로 모든 경우의 수를 다 넣어보는 단순무식한 방법이다. 4자리 숫자 자물쇠 번호를 맞추는 가장 쉬운 방법이 무엇일까? 바로 0000부터 9999까지 다 넣어보면 되는 것이다. 이 방법이 바로 브루트포스 알고리즘이다.  
 
 [1059번](https://www.acmicpc.net/problem/1059)   
-[1233번](https://www.acmicpc.net/problem/1233)   
+[1233번](https://www.acmicpc.net/problem/1233) 
+
 등 문제를 브루트포스 알고리즘으로 풀 수 있다.
 
 * * *
@@ -26,6 +27,7 @@ toc: true
 그리디 알고리즘은 브루트포스 알고리즘과 비슷한 알고리즘이다. 하지만 브루트포스 알고리즘은 모든 경우를 다 본다면 그리디 알고리즘은 매 순간마다 자기에게 가장 이득이 되는 선택을 취하게 된다.   
 [1417번](https://www.acmicpc.net/problem/1417)   
 [2839번](https://www.acmicpc.net/problem/2839)   
+
 등 문제를 그리디 알고리즘으로 풀 수 있다.
 
 * * *
@@ -78,5 +80,6 @@ def bfs(start):
 DFS는 그래프의 모든 경우를 하나하나 탐색해야할 때, BFS는 그래프 내의 최단 거리를 찾아야할 때 자주 사용된다.
 
 [2644번](https://www.acmicpc.net/problem/2644)   
-[1260번](https://www.acmicpc.net/problem/1260)   
+[1260번](https://www.acmicpc.net/problem/1260)  
+ 
 등 문제를 DFS 알고리즘으로 풀 수 있다.
