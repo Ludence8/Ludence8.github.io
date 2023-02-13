@@ -18,7 +18,7 @@ toc: true
 가장 단순한 방법이다. 바로 모든 경우의 수를 다 넣어보는 단순무식한 방법이다. 4자리 숫자 자물쇠 번호를 맞추는 가장 쉬운 방법이 무엇일까? 바로 0000부터 9999까지 다 넣어보면 되는 것이다. 이 방법이 바로 브루트포스 알고리즘이다.  
 
 [1059번](https://www.acmicpc.net/problem/1059)   
-[1233번](https://www.acmicpc.net/problem/1233)
+[1233번](https://www.acmicpc.net/problem/1233)   
 등 문제를 브루트포스 알고리즘으로 풀 수 있다.
 
 * * *
@@ -37,10 +37,14 @@ DFS는 Deep-First Search의 줄임말로 그래프의 노드와 다음 노드를
 말로는 이해가 힘들어 실제 트리를 통해 탐색 결과를 비교해보면   
 ![제목](\assets\tree.png "출처 : 위키피디아"){: width="40%" height="40%"}   
 해당 그래프를 DFS를 통해 탐색할 경우   
+
 2 > 7 > 2 > 6 > 5 > 11 > 5 > 9 > 4   
+
 의 순서로 탐색을 진행할 것이다.   
 하지만 BFS로 탐색할 경우   
+
 2 > 7 > 5 > 2 > 6 > 9 > 5 > 11 > 4   
+
 의 순서로 탐색을 한다는 차이점이 있다.   
 
 DFS의 구현은 일반적으로 재귀를 통하여 구현한다.
@@ -73,6 +77,6 @@ def bfs(start):
 
 DFS는 그래프의 모든 경우를 하나하나 탐색해야할 때, BFS는 그래프 내의 최단 거리를 찾아야할 때 자주 사용된다.
 
-[2644번](https://www.acmicpc.net/problem/2644)
-[1260번](https://www.acmicpc.net/problem/1260)
+[2644번](https://www.acmicpc.net/problem/2644)   
+[1260번](https://www.acmicpc.net/problem/1260)   
 등 문제를 DFS 알고리즘으로 풀 수 있다.
