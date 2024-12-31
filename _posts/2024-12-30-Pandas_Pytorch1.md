@@ -49,7 +49,4 @@ Pandas, Numpy 및 Pytorch를 import 해주었다.
 ```python
 titanic = pd.read_csv("tested.csv")
 ```
-데이터를 보았을 떄 이름, 승객 번호, 티켓 번호는 불필요해 보이고, 호실 번호 역시 결측값이 많고 불필요해 보여 해당 열들을 제거해주었다.
-```python
-titanic = titanic.drop(columns=["Name", "Ticket", "PassengerID", "Cabin"])
-```
+
