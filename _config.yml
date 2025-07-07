@@ -47,6 +47,7 @@ sass:
 # Options
 
 future: true
+timezone: Asia/Seoul
 # Replace this value and uncomment to enable Google Analytics tracking
 # google_analytics: UA-000000-0
 
