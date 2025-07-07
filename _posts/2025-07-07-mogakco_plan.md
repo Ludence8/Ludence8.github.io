@@ -3,7 +3,7 @@ layout: post
 title: "[Study] 2025 하계 모각코 활동계획_1회차"
 tags: [Study]
 math: true
-date: 2025-07-07 15:00 +1800
+date: 2025-07-07 15:00 +0900
 categories:
     - Study
 toc: true
