@@ -54,3 +54,10 @@
     margin-left: var(--spacer);
   }
 }
+/* 홈 목록 본문 미리보기 3줄로 줄이기 */
+.post-content, .post .content, .post-summary {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;  /* 원하는 줄 수: 2~3으로 조절 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
