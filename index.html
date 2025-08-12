@@ -1,3 +1,25 @@
 ---
-layout: home
+layout: default
 ---
+
+<div class="posts">
+  {% assign posts = paginator.posts | default: site.posts %}
+  {% for post in posts %}
+  <article class="post">
+    <h2 class="post-title">
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </h2>
+    <span class="post-date">{{ post.date | date: "%d %b %Y" }}</span>
+
+    <p class="excerpt">
+      {% if post.excerpt %}
+        {{ post.excerpt | strip_html | truncatewords: 35 }}
+      {% else %}
+        {{ post.content | strip_html | truncatewords: 35 }}
+      {% endif %}
+    </p>
+
+    <a class="read-more" href="{{ post.url | relative_url }}">더 보기 →</a>
+  </article>
+  {% endfor %}
+</div>
