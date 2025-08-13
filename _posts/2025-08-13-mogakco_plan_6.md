@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[Study] 2025 하계 모각코 활동계획_5회차"
+title: "[Study] 2025 하계 모각코 활동계획_6회차"
 tags: [Study]
 math: true
-date: 2025-08-11 17:00 +0900
+date: 2025-08-13 16:00 +0900
 categories:
     - Study
 toc: true
@@ -18,6 +18,6 @@ toc: true
 온라인으로 모임 (디스코드 활용)  
 ## 활동 예정 사항   
 5차: 08.11 18:00 ~ 22:00   
-할 내용 : 컴퓨터그래픽스 분야 이해를 위한 WebGL 공부
+할 내용 : 컴퓨터그래픽스 분야 이해를 위한 WebGL 공부_2
  
 
