@@ -16,8 +16,8 @@ giscus_repo: "byanko55/jekyll-theme-satellite"
 giscus_repoId: "R_kgDOJ6fqWg"
 giscus_category: "Q&A"
 giscus_categoryId: "DIC_kwDOJ6fqWs4Cc7p7"
-goatcounter_code: byanko77
-google_analytics:
+goatcounter_code: "ludence8"
+google_analytics: "G-5M4CE4HYCN"
 
 # If your repo name follows the format "<user-name>.github.io", then leave the below blank.
 # Otherwise, set its value as "/<repo-name>". ex) baseurl: /myblog
@@ -51,5 +51,3 @@ defaults:
 kramdown:
   input: GFM
   hard_wrap: true
-
-goatcounter_code: [ludence8]
