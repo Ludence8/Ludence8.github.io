@@ -1,12 +1,77 @@
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css">
-  <link rel="stylesheet" href="{{ 'assets/styles.css' | relative_url }}">=
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>
+    {% if page.url == "/index.html" %}
+        Home
+    {% elsif page_type == "category" %}
+        {{ category_title }}
+    {% else %}
+        {{ page.title }}
+    {% endif %}
+</title>
+{% seo %}
 
-  {%- seo -%}
-  {%- feed_meta -%}
+<link rel="shortcut icon" type="image/png" href="{{ site.logo_img | prepend: site.baseurl }}">
+<style>
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: optional;
+    src: local('Nunito Sans'),
+         url("{{ site.baseurl }}/assets/fonts/NunitoSans-Regular.woff2") format("woff2");
+}
 
-  {%- include custom-head.html -%}
-</head>
+@font-face {
+    font-family: 'Righteous';
+    font-style: normal;
+    font-weight: 600;
+    font-display: optional;
+    src: local('Righteous'),
+         url("{{ site.baseurl }}/assets/fonts/Righteous-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-display: optional;
+    src: local('Lato'),
+         url("{{ site.baseurl }}/assets/fonts/Lato-Regular.woff2") format("woff2");
+}
+</style>
+
+<script src="{{ '/assets/js/fontfaceobserver.js' | prepend: site.baseurl }}" type="text/javascript"></script>
+<script type="text/javascript">
+    const nunitoObserver = new FontFaceObserver('Nunito Sans');
+    const righteousObserver = new FontFaceObserver('Righteous');
+    const latoObserver = new FontFaceObserver('Lato');
+  
+    Promise.all([
+        nunitoObserver.load(),
+        righteousObserver.load(),
+        latoObserver.load(),
+    ]).then(function(){
+        document.documentElement.className += " fonts-loaded";
+    });
+</script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']], // $기호 하나로 인라인 수식 사용 가능하게 설정
+      displayMath: [['$$', '$$'], ['\\[', '\\]']], // $$기호 두 개로 블록 수식 사용
+      processEscapes: true,
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<meta name="baseurl" content="{{ site.baseurl }}">
+<meta
+name="description"
+content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">

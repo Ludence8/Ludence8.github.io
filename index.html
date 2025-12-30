@@ -2,24 +2,32 @@
 layout: default
 ---
 
-<div class="posts">
-  {% assign posts = paginator.posts | default: site.posts %}
-  {% for post in posts %}
-  <article class="post">
-    <h2 class="post-title">
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    </h2>
-    <span class="post-date">{{ post.date | date: "%d %b %Y" }}</span>
-
-    <p class="excerpt">
-      {% if post.excerpt %}
-        {{ post.excerpt | strip_html | truncatewords: 35 }}
-      {% else %}
-        {{ post.content | strip_html | truncatewords: 35 }}
-      {% endif %}
-    </p>
-
-    <a class="read-more" href="{{ post.url | relative_url }}">더 보기 →</a>
-  </article>
+<div class="catalogue">
+  {% for post in site.posts %}
+    <a href="{{ post.url | relative_url }}" class="catalogue-item">
+      <div>
+        <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
+        <h1 class="catalogue-title">{{ post.title }}</h1>
+        <div class="catalogue-line"></div>
+        <p>
+          {% if post.description %}
+            {{ post.description }}
+          {% else %}
+            {{ post.excerpt | strip_html | truncatewords: 30 }}
+          {% endif %}
+        </p>
+      </div>
+    </a>
   {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}" class="left arrow">&#8592;</a>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}" class="right arrow">&#8594;</a>
+  {% endif %}
+
+  <span>{{ paginator.page }}</span>
 </div>
