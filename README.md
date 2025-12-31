@@ -13,13 +13,6 @@
 # Satellite🛰️ - Jekyll blog theme
 An emotional and adorable blog theme powered by ***Jekyll***. 
 
-
-### Fresh and Attractive Design
-<p>
-<img src="https://i.ibb.co/4NwrTyj/image-2.webp" height="400px" align="center"/>
-<img src="https://i.ibb.co/WvyBzkL/Animation.gif" height="400px" align="center"/>
-</p>
-
 <br></br>
 
 ## Features
