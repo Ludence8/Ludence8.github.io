@@ -7,6 +7,7 @@ date: 2023-02-13 12:04 +0800
 categories:
     - Baekjoon
 toc: true
+thumbnail: "/assets/img/thumbnail/boj-og.png"
 ---
 백준에서 문제를 풀어보니 자주 보이는 문제 유형들에 사용되는 알고리즘을 정리할 수 있을 것 같다는 생각이 들었다.
 
