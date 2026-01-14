@@ -331,6 +331,8 @@ main {
   .table-wrapper { overflow-x:auto; }
 
   table {
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif !important;
+    text-align: center;
     display:block;
     max-width:-moz-fit-content;
     max-width:fit-content;
@@ -359,7 +361,8 @@ main {
     td:last-child, th:last-child { border-right:0; }
   }
 
-  li { padding:4px 0; }
+  li { padding:4px 0; 
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif !important;}
 
   hr {
     border:0;
