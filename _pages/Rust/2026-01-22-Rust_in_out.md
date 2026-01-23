@@ -4,7 +4,7 @@ tags: [Rust, Baekjoon]
 toc: true
 math: true
 date: 2026-01-22 11:00 +0800
-thumbnail: "/image/image36.jpg"
+thumbnail: "/image/rustLogo.webp"
 ---
 _최근에 러스트를 공부하기 시작하면서 러스트로 백준을 풀어보려 하고 있다. 이 과정에서 러스트의 입출력은 다른 언어보다 조금 더 복잡하다고 느끼고 있다. 그래서 개인적인 기록 용도로 입출력 방법을 정리해두고자 한다._
 ## 입력
