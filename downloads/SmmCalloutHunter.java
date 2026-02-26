@@ -1,4 +1,4 @@
-﻿import ghidra.app.script.GhidraScript;
+import ghidra.app.script.GhidraScript;
 import ghidra.app.decompiler.*;
 import ghidra.program.model.address.AddressIterator;
 import ghidra.program.model.symbol.*;
