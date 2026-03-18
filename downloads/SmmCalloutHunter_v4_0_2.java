@@ -12,7 +12,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class SmmCalloutHunter_v4_0_1 extends GhidraScript {
+public class SmmCalloutHunter_v4_0_2 extends GhidraScript {
     // 디컴파일러
     private DecompInterface decomp;
     // 이미 방문한 함수 주소를 저장하여 무한 루프 방지
@@ -304,7 +304,7 @@ public class SmmCalloutHunter_v4_0_1 extends GhidraScript {
             println("\nWarning : 총 " + vulnCount + "개의 런타임 취약점 의심 지점이 발견되었습니다.");
         }
 
-        String scriptName = "SmmCalloutHunter_v4_0_1";
+        String scriptName = "SmmCalloutHunter_v4_0_2";
         String binaryName = currentProgram.getName();
         Boolean vulnerabilityFound = vulnCount > 0 ? true : false;
         String timestamp = (System.currentTimeMillis() - startTime) / 1000.0 +"";
@@ -606,7 +606,7 @@ public class SmmCalloutHunter_v4_0_1 extends GhidraScript {
     }
 
     private void saveJsonToFileIfError(String errorMessage) {
-        String scriptName = "SmmCalloutHunter_v4_0_1";
+        String scriptName = "SmmCalloutHunter_v4_0_2";
         String binaryName = currentProgram.getName();
         Boolean vulnerabilityFound = false;
         String timestamp = (System.currentTimeMillis() - startTime) / 1000.0 +"";
